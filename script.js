@@ -64,7 +64,7 @@ console.log(cart);
 //console.log(ShoppingCart2.shippingCost);
 //
 
-import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+import cloneDeep from 'lodash-es';
 
 const state = {
   cart: [
@@ -79,3 +79,7 @@ const stateCloneDeep = cloneDeep(state);
 state.user.loggedIn = false;
 console.log(stateClone);
 console.log(stateCloneDeep);
+
+if (module.hot) {
+  module.hot.accept();
+}
